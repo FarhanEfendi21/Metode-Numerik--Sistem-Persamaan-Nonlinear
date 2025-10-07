@@ -67,17 +67,6 @@ def g1A(x, y):
         raise ValueError("Pembagi y mendekati nol")
     return (10 - x**2) / y
 
-def g1B(x, y):
-    """g1B: x = √(10 - xy)"""
-    value = 10 - x*y
-    if value < 0:
-        raise ValueError("Nilai dalam akar negatif")
-    return np.sqrt(value)
-
-def g2A(x, y):
-    """g2A: y = 57 - 3xy²"""
-    return 57 - 3*x*y**2
-
 def g2B(x, y):
     """g2B: y = √((57 - y)/(3x))"""
     if abs(x) < 1e-10:
@@ -374,7 +363,7 @@ def metode_secant(x0, y0, epsilon, max_iter=1000):
 
 def main():
     print("="*80)
-    print("PENYELESAIAN SISTEM PERSAMAAN NON-LINEAR")
+    print("PENYELESAIAN 4 METODE SISTEM PERSAMAAN NON-LINEAR")
     print("="*80)
     print("NIM: 81")
     print("NIMx: 81 mod 4 = 1")
@@ -382,15 +371,10 @@ def main():
     print("  f1(x,y) = x² + xy - 10 = 0")
     print("  f2(x,y) = y + 3xy² - 57 = 0")
     print("\nKombinasi Fungsi Iterasi:")
-    print("  NIMx = 0: g1A dan g2A")
     print("  NIMx = 1: g1A dan g2B  ← KOMBINASI UNTUK NIMx : 1")
-    print("  NIMx = 2: g1B dan g2A")
-    print("  NIMx = 3: g1B dan g2B")
     print("\nFungsi Iterasi:")
-    print("  g1A: x = (10 - x²)/y")
-    print("  g1B: x = √(10 - xy)")
-    print("  g2A: y = 57 - 3xy²")
-    print("  g2B: y = √((57 - y)/(3x))")
+    print("  g1A: x = (10 - x²)/y - halaman 5") 
+    print("  g2B: y = √((57 - y)/(3x)) - halaman 6")
     print("="*80)
     
     # Parameter
